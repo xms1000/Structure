@@ -1,8 +1,6 @@
 package com.xms.examination;
 
 
-import org.junit.Test;
-
 /**
  * Created by xms on 2017/8/23.
  */
