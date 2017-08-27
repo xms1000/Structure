@@ -1,6 +1,7 @@
 package com.xms.structure;
 
-import com.xms.examination.status.TreeNode;
+
+import com.xms.structure.status.TreeNode;
 
 /**
  * Created by xms on 2017/8/19.

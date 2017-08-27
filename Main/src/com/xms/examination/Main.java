@@ -1,5 +1,7 @@
 package com.xms.examination;
 
+import com.xms.examination.utils.Bitmap;
+
 import java.util.*;
 
 /**
@@ -7,27 +9,17 @@ import java.util.*;
  */
 public class Main
 {
-    static class Node implements Comparable<Node> {
-        int x;
-        int y;
-        public Node(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-        @Override
-        public int compareTo(Node o) {
-            return Integer.compare(o.x,x);
-        }
-        @Override
-        public String toString() {
-            return x + " " + y ;
-        }
-    }
     public static void main(String[] args){
-        Scanner in = new Scanner(System.in);
-        while (in.hasNext()){
+        Bitmap bitmaps =new Bitmap((int) Math.pow(2,32));
+        int[] a = {3,4,2,34,51,43,5,5,2,5,32,5,624,21,5,432,51234,5,523,5,6,234,44223,44223,23,234,1234,213,423,4,24,3124,4,234,4,243,213,24,234};
+        for(int i:a){
+            bitmaps.set(i);
         }
-        in.close();
+        for(int i = bitmaps.getSize();i>=0;i--){
+            if(bitmaps.get(i)){
+                System.out.print(i+" ");
+            }
+        }
     }
 
     private static long calculate(int[] a, int n, int k, int d) {
