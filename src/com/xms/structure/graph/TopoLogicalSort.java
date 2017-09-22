@@ -36,7 +36,7 @@ public class TopoLogicalSort {
 			return false;
 		}
 	}
-	public static void CriticalPaht(EdgeNode[] nodes){
+	public static void CriticalPath(EdgeNode[] nodes){
 		Stack<Integer> stack = new Stack<>();
 		int n = nodes.length;
 		int[] etv = new int[n];
